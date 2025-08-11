@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEO & Content Toolkit — Tools for Creators</title>
+  <meta name="description" content="Free SEO and content tools: AI blog title generator, keyword ideas, meta tag generator, plagiarism checker (placeholder), readability, and more. Privacy-first & AdSense-ready." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>SEO & Content Toolkit</h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="docs.html">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <h2>Build & Grow with useful tools — ready for AdSense</h2>
+      <p class="lead">A lightweight, privacy-first toolset for writers, SEOs, and creators.</p>
+      <div class="cta">
+        <a class="btn" href="#tools">Open Tools</a>
+        <a class="btn ghost" href="docs.html">Get the Guide</a>
+      </div>
+    </section>
+
+    <section id="tools" class="tools-grid">
+      <aside class="sidebar">
+        <h3>Tools</h3>
+        <ul id="tool-list">
+          <li data-tool="title">AI Blog Title Generator</li>
+          <li data-tool="keywords">Keyword Idea Tool</li>
+          <li data-tool="meta">Meta Tag Generator</li>
+          <li data-tool="plag">Plagiarism Checker (placeholder)</li>
+          <li data-tool="read">Readability Score</li>
+        </ul>
+        <div class="note">
+          <strong>Note:</strong> Replace server placeholders before large-scale traffic (plagiarism & real AI require server-side APIs).
+        </div>
+      </aside>
+
+      <section class="tool-area" id="tool-area">
+        <!-- Tools injected here -->
+      </section>
+    </section>
+
+    <section class="ad-section" id="ad-area">
+      <!-- Ad will load here after consent -->
+      <div class="ad-placeholder">Ads are paused until cookie consent is given.</div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> SEO & Content Toolkit</div>
+      <div><a href="privacy.html">Privacy</a> · <a href="docs.html">Docs</a></div>
+    </div>
+  </footer>
+
+  <!-- Cookie consent modal/gate -->
+  <div id="cookie-consent" class="cookie-consent hidden" role="dialog" aria-live="polite">
+    <div class="consent-box">
+      <h4>We use cookies & ads</h4>
+      <p>To show ads (Google AdSense) we need your consent to load third-party scripts. We respect privacy and process minimal data.</p>
+      <div class="consent-actions">
+        <button id="accept-consent" class="btn">Allow ads & continue</button>
+        <button id="reject-consent" class="btn ghost">No thanks</button>
+      </div>
+      <a class="small" href="privacy.html">Read privacy policy</a>
+    </div>
+  </div>
+
+  <script src="tools.js"></script>
+  <script src="consent.js"></script>
+  <script>document.getElementById('year').innerText = new Date().getFullYear();</script>
+</body>
+</html>

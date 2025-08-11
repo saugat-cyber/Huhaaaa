@@ -1,0 +1,41 @@
+/* Simple, clean styling focused on UX and mobile friendliness */
+:root{
+  --bg:#f8fafc; --card:#ffffff; --muted:#6b7280; --accent:#0ea5e9; --radius:12px;
+  --max:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111827; -webkit-font-smoothing:antialiased;}
+.container{max-width:var(--max); margin:0 auto; padding:20px;}
+.site-header{background:var(--card); border-bottom:1px solid #e6edf3; position:sticky; top:0; z-index:40;}
+.site-header .container{display:flex; align-items:center; justify-content:space-between;}
+.site-header h1{margin:0; font-size:18px;}
+.nav a{margin-left:12px; color:var(--muted); text-decoration:none; font-size:14px;}
+.hero{padding:28px 0;}
+.hero h2{font-size:28px; margin:0 0 6px;}
+.lead{color:var(--muted); margin:0 0 12px;}
+.btn{background:var(--accent); color:white; padding:10px 14px; border-radius:8px; text-decoration:none; display:inline-block;}
+.btn.ghost{background:transparent; color:var(--accent); border:1px solid rgba(14,165,233,0.15);}
+.tools-grid{display:grid; grid-template-columns:320px 1fr; gap:18px; margin-top:12px;}
+.sidebar{background:var(--card); padding:16px; border-radius:var(--radius); box-shadow:0 4px 18px rgba(2,6,23,0.06);}
+.sidebar h3{margin-top:0;}
+#tool-list{list-style:none; padding:0; margin:8px 0 0;}
+#tool-list li{padding:10px; border-radius:8px; cursor:pointer; color:var(--accent);}
+#tool-list li:hover{background:#f1fbff;}
+.note{font-size:13px; color:var(--muted); margin-top:12px;}
+.tool-area{background:var(--card); padding:18px; border-radius:var(--radius); min-height:340px;}
+.ad-section{margin-top:18px; display:flex; justify-content:center;}
+.ad-placeholder{background:#fff3cd; padding:10px 16px; border-radius:8px; color:#856404;}
+
+/* Cookie consent */
+.cookie-consent{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(2,6,23,0.4);}
+.cookie-consent.hidden{display:none;}
+.consent-box{background:var(--card); padding:18px; border-radius:12px; max-width:520px; text-align:left; box-shadow:0 10px 30px rgba(2,6,23,0.2);}
+.consent-actions{display:flex; gap:8px; margin-top:12px;}
+.small{display:block; margin-top:8px; font-size:13px; color:var(--muted)}
+
+/* Responsive */
+@media(max-width:900px){
+  .tools-grid{grid-template-columns:1fr; padding-top:10px;}
+  .sidebar{order:2}
+  .tool-area{order:1}
+}
